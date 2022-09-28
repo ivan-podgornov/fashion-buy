@@ -3,14 +3,21 @@
   "private": true,
   "scripts": {
     "compile": "tsc",
+    "lint": "yarn lint:editorconfig && yarn lint:commit && yarn lint:ts-code",
+    "lint:commit": "commitlint --edit ${1}",
     "lint:ts-code": "eslint ./src/",
     "lint:editorconfig": "editorconfig-checker",
+    "pre-commit": "yarn test",
+    "prepare": "husky install",
+    "pretest": "yarn lint",
     "test": "jest"
   },
   "dependencies": {
     "typescript": "^4.8.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@types/jest": "^29.0.0",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
@@ -21,6 +28,7 @@
     "eslint-plugin-jest": "^27.0.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
     "jest": "^29.0.1",
     "prettier": "^2.7.1",
     "ts-jest": "^28.0.8",
