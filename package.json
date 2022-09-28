@@ -2,7 +2,11 @@
   "name": "fashion-buy",
   "private": true,
   "scripts": {
+    "compile": "tsc",
     "lint:editorconfig": "editorconfig-checker"
+  },
+  "dependencies": {
+    "typescript": "^4.8.4"
   },
   "devDependencies": {
     "editorconfig-checker": "^4.0.2"
