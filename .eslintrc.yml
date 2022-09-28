@@ -1,5 +1,6 @@
 env:
   es2021: true
+  jest/globals: true
   node: true
 extends:
   - plugin:import/errors
@@ -7,9 +8,15 @@ extends:
   - plugin:import/typescript
   - plugin:@typescript-eslint/recommended
   - plugin:prettier/recommended
+overrides:
+  -
+    files: ['*.spec.ts']
+    plugins: ['jest']
+    extends: ['plugin:jest/all']
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaVersion: latest
+  project: './tsconfig.json'
   sourceType: module
 settings:
   import/resolver:
