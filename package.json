@@ -1,0 +1,10 @@
+{
+  "name": "fashion-buy",
+  "private": true,
+  "scripts": {
+    "lint:editorconfig": "editorconfig-checker"
+  },
+  "devDependencies": {
+    "editorconfig-checker": "^4.0.2"
+  }
+}
