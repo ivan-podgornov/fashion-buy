@@ -1,0 +1,20 @@
+name: Test
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        # Устанавливаем nodejs 14 версии с включенным кешем для зависимостей
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: yarn
+      # Устанавливаем зависимости. Если были закешированны, отлично
+      - run: yarn --frozen-lockfile
+        shell: bash
+      - run: yarn lint
+      - run: yarn test

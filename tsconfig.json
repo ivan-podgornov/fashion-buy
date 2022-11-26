@@ -6,13 +6,13 @@
     "isolatedModules": true,
     "module": "CommonJS",
     "moduleResolution": "node",
+    "noEmit": true,
     "noEmitOnError": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "dist",
     "skipLibCheck": true,
     "strict": true,
     "target": "es2016"
   },
-  "include": ["./src/"]
+  "include": ["./packages/*/src/*", "./jest.config.ts"]
 }

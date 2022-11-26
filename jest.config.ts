@@ -1,12 +1,9 @@
-// jest.config.ts
 import type { InitialOptionsTsJest } from 'ts-jest'
 
 const config: InitialOptionsTsJest = {
   preset: 'ts-jest',
   globals: {
-    'ts-jest': {
-      // ts-jest configuration goes here
-    },
+    'ts-jest': {},
   },
 }
 
