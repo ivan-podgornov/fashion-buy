@@ -3,10 +3,11 @@
   "private": true,
   "scripts": {
     "compile": "tsc",
-    "lint": "yarn lint:editorconfig && yarn lint:commit && yarn lint:ts",
+    "lint": "yarn lint:editorconfig && yarn lint:commit && yarn lint:duplicates && yarn lint:ts",
     "lint:commit": "commitlint --edit ${1}",
     "lint:ts": "eslint ./packages/*/src/",
     "lint:editorconfig": "editorconfig-checker",
+    "lint:duplicates": "yarn yarn-deduplicate --list --fail",
     "postinstall": "yarn yarn-deduplicate",
     "pre-commit": "yarn test",
     "prepare": "husky install",
