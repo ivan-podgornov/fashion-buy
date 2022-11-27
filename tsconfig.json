@@ -6,7 +6,6 @@
     "isolatedModules": true,
     "module": "CommonJS",
     "moduleResolution": "node",
-    "noEmit": true,
     "noEmitOnError": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,

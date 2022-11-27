@@ -12,6 +12,8 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
     networks:
       - database
+    ports:
+      - 5432:5432
     volumes:
       - .:/var/lib/postgresql/data
 
