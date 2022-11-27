@@ -15,6 +15,7 @@
     "postinstall": "yarn yarn-deduplicate",
     "pre-commit": "yarn test",
     "prepare": "husky install",
+    "start:api": "yarn workspace @fashion-buy/api start",
     "test": "jest"
   },
   "dependencies": {
