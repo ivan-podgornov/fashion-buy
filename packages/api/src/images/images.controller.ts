@@ -38,6 +38,6 @@ export class ImagesController {
   ) {
     const base = `${request.protocol}://${request.headers.host}`
     const originalUrl = new URL(request.originalUrl, base)
-    return this.imagesService.save(uploadedFile.buffer, { originalUrl })
+    return this.imagesService.create(uploadedFile.buffer, { originalUrl })
   }
 }
