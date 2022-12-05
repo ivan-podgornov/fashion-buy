@@ -16,10 +16,11 @@ overrides:
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaVersion: latest
-  project: './tsconfig.json'
+  project: ['./tsconfig.json', './packages/*/tsconfig.json']
   sourceType: module
 settings:
   import/resolver:
     typescript: {}
 rules:
   import/no-default-export: 'error'
+  jest/prefer-lowercase-title: ['error', { ignore: ['describe'] }]
